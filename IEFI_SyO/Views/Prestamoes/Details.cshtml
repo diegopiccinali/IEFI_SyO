@@ -1,0 +1,74 @@
+﻿@model IEFI_SyO.Models.Prestamo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Prestamo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaPrestamo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaPrestamo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDevolucionPrevista)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDevolucionPrevista)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDevolucionReal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDevolucionReal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaBaja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaBaja)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Libro.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Libro.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Socio.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Socio.Nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDPrestamo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

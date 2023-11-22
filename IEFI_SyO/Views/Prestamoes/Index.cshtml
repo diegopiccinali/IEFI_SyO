@@ -1,0 +1,69 @@
+﻿@model IEnumerable<IEFI_SyO.Models.Prestamo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaPrestamo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDevolucionPrevista)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDevolucionReal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaBaja)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Libro.Titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Socio.Nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaPrestamo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDevolucionPrevista)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDevolucionReal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaBaja)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Libro.Titulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Socio.Nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDPrestamo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDPrestamo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDPrestamo })
+        </td>
+    </tr>
+}
+
+</table>
